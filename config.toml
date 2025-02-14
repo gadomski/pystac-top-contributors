@@ -1,5 +1,10 @@
 [ecosystems.stac]
-repos = ["stac-utils/pystac", "stac-utils/pystac-client"]
+repos = [
+    "stac-utils/pystac",
+    "stac-utils/pystac-client",
+    "stac-utils/stac-fastapi",
+    "stac-utils/stactools",
+]
 top_contributors = [
     "lossyrob",
     "duckontheweb",

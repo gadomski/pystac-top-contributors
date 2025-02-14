@@ -66,6 +66,7 @@ def cli() -> None:
         top_contributors = set()
         links = []
         for repo_name in ecosystem.repos:
+            print(f"Getting {repo_name}")
             repo = github.get_repo(repo_name)
             contributors = []
             for contributor in repo.get_contributors():
@@ -73,16 +74,18 @@ def cli() -> None:
                 if contributor_name := config.contributors.get(contributor.login):
                     if contributor.login in ecosystem.top_contributors:
                         top_contributors.add(contributor_name)
-                    links.append(
-                        [
-                            contributor_name,
-                            repo.full_name,
-                            contributor.contributions,
-                            # TODO actually get these times
-                            datetime.datetime.now().timestamp(),
-                            datetime.datetime.now().timestamp(),
-                        ]
-                    )
+                    print(f"Getting commits for {contributor_name}")
+                    commits = list(repo.get_commits(author=contributor.login))
+                    if commits:
+                        links.append(
+                            [
+                                contributor_name,
+                                repo.full_name,
+                                contributor.contributions,
+                                commits[0].commit.author.date.timestamp(),
+                                commits[-1].commit.author.date.timestamp(),
+                            ]
+                        )
             repositories.append(Repository.from_repo(repo, contributors).model_dump())
         with open(directory / "repositories.csv", "w") as f:
             fieldnames = list(Repository.model_json_schema()["properties"].keys())

@@ -1,11 +1,17 @@
 author_name,repo,commit_count,commit_sec_min,commit_sec_max
-Rob Emanuele,stac-utils/pystac,548,1739550843.558069,1739550843.558077
-Jon Duckworth,stac-utils/pystac,322,1739550843.558087,1739550843.55809
-Pete Gadomski,stac-utils/pystac,192,1739550843.558095,1739550843.558098
-Julia Signell,stac-utils/pystac,90,1739550843.558103,1739550843.558105
-Matthew Hanson,stac-utils/pystac,29,1739550843.558113,1739550843.558121
-Matthew Hanson,stac-utils/pystac-client,339,1739550845.608662,1739550845.60867
-Pete Gadomski,stac-utils/pystac-client,162,1739550845.608677,1739550845.608679
-Jon Duckworth,stac-utils/pystac-client,49,1739550845.608684,1739550845.608687
-Julia Signell,stac-utils/pystac-client,14,1739550845.608691,1739550845.608694
-Rob Emanuele,stac-utils/pystac-client,5,1739550845.608699,1739550845.608701
+Rob Emanuele,stac-utils/pystac,548,1636739059.0,1568322608.0
+Jon Duckworth,stac-utils/pystac,322,1655664875.0,1619982304.0
+Pete Gadomski,stac-utils/pystac,192,1738598671.0,1615497591.0
+Julia Signell,stac-utils/pystac,90,1739201936.0,1673540508.0
+Matthew Hanson,stac-utils/pystac,29,1617036064.0,1615498658.0
+Matthew Hanson,stac-utils/pystac-client,339,1650341067.0,1617420548.0
+Pete Gadomski,stac-utils/pystac-client,162,1739278947.0,1618344622.0
+Jon Duckworth,stac-utils/pystac-client,49,1656089048.0,1614454736.0
+Julia Signell,stac-utils/pystac-client,14,1738358456.0,1681915703.0
+Rob Emanuele,stac-utils/pystac-client,5,1625868248.0,1625861134.0
+Rob Emanuele,stac-utils/stac-fastapi,50,1635862711.0,1623128845.0
+Pete Gadomski,stac-utils/stac-fastapi,29,1694007382.0,1668699025.0
+Jon Duckworth,stac-utils/stac-fastapi,3,1659463233.0,1659018248.0
+Pete Gadomski,stac-utils/stactools,281,1734957065.0,1616419455.0
+Rob Emanuele,stac-utils/stactools,178,1631539182.0,1597876547.0
+Julia Signell,stac-utils/stactools,11,1691697208.0,1685628223.0

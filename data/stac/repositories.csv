@@ -1,3 +1,5 @@
 repo,repo_stars,repo_forks,repo_createdAt,repo_updatedAt,repo_total_commits,repo_url,repo_description,repo_languages
 stac-utils/pystac,378,123,2017-11-08 13:30:15+00:00,2025-02-13 03:28:01+00:00,1938,https://pystac.readthedocs.io,Python library for working with any SpatioTemporal Asset Catalog (STAC),"Python,Jinja,Shell"
 stac-utils/pystac-client,175,48,2021-03-03 03:33:04+00:00,2025-02-13 03:28:03+00:00,926,https://pystac-client.readthedocs.io,Python client for searching STAC APIs,"Python,Shell"
+stac-utils/stac-fastapi,259,105,2020-06-17 03:31:20+00:00,2025-01-30 17:49:58+00:00,426,https://stac-utils.github.io/stac-fastapi/,STAC API implementation with FastAPI. ,"Python,Shell,Dockerfile,Makefile"
+stac-utils/stactools,104,29,2020-08-19 22:36:21+00:00,2024-12-23 12:31:09+00:00,649,https://stactools.readthedocs.io/,Command line utility and Python library for STAC,"Python,Shell,Dockerfile"
