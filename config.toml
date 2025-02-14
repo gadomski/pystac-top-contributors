@@ -1,0 +1,16 @@
+[ecosystems.stac]
+repos = ["stac-utils/pystac", "stac-utils/pystac-client"]
+top_contributors = [
+    "lossyrob",
+    "duckontheweb",
+    "gadomski",
+    "jsignell",
+    "matthewhanson",
+]
+
+[contributors]
+lossyrob = "Rob Emanuele"
+duckontheweb = "Jon Duckworth"
+gadomski = "Pete Gadomski"
+jsignell = "Julia Signell"
+matthewhanson = "Matthew Hanson"

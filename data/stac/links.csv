@@ -1,0 +1,11 @@
+author_name,repo,commit_count,commit_sec_min,commit_sec_max
+Rob Emanuele,stac-utils/pystac,548,1739550843.558069,1739550843.558077
+Jon Duckworth,stac-utils/pystac,322,1739550843.558087,1739550843.55809
+Pete Gadomski,stac-utils/pystac,192,1739550843.558095,1739550843.558098
+Julia Signell,stac-utils/pystac,90,1739550843.558103,1739550843.558105
+Matthew Hanson,stac-utils/pystac,29,1739550843.558113,1739550843.558121
+Matthew Hanson,stac-utils/pystac-client,339,1739550845.608662,1739550845.60867
+Pete Gadomski,stac-utils/pystac-client,162,1739550845.608677,1739550845.608679
+Jon Duckworth,stac-utils/pystac-client,49,1739550845.608684,1739550845.608687
+Julia Signell,stac-utils/pystac-client,14,1739550845.608691,1739550845.608694
+Rob Emanuele,stac-utils/pystac-client,5,1739550845.608699,1739550845.608701
