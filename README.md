@@ -8,7 +8,7 @@ Get [uv](https://docs.astral.sh/uv/getting-started/installation/).
 Then:
 
 ```shell
-git clone git@github.com:Gadomski/pystac-top-contibutors
+git clone git@github.com:gadomski/pystac-top-contibutors
 cd pystac-top-contibutors 
 uv sync
 ```
