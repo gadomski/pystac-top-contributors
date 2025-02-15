@@ -1,10 +1,10 @@
-[ecosystems.stac]
+[ecosystems.pystac]
 repos = [
+    "stac-utils/pystac",
     "radiantearth/stac-spec",
     "radiantearth/stac-browser",
     "radiantearth/stac-api-spec",
     "radiantearth/stac-site",
-    "stac-utils/pystac",
     "stac-utils/pystac-client",
     "stac-utils/stac-fastapi",
     "stac-utils/stac-fastapi-pgstac",
@@ -19,21 +19,15 @@ top_contributors = [
     "gadomski",
     "jsignell",
     "matthewhanson",
-    "geospatial-jeff",
+    "l0b0",
+    "simonkassel",
+    "schwehr",
+    "volaya",
+    "pjhartzell",
     "vincentsarago",
     "moradology",
-    "jonhealy1",
-    "bitner",
-    "philvarner",
-    "sharkinsspatial",
-    "kbgg",
-    "DanielJDufour",
     "m-mohr",
-    "cholmes",
     "emmanuelmathot",
-    "mojodna",
-    "jbants",
-    "PowerChell",
 ]
 
 [contributors]
@@ -42,18 +36,12 @@ duckontheweb = "Jon Duckworth"
 gadomski = "Pete Gadomski"
 jsignell = "Julia Signell"
 matthewhanson = "Matthew Hanson"
-geospatial-jeff = "Jeff Albrecht"
 vincentsarago = "Vincent Sarago"
 moradology = "Nathan Zimmerman"
-jonhealy1 = "Jonathan Healy"
-bitner = "David Bitner"
-philvarner = "Phil Varner"
-sharkinsspatial = "Sean Harkins"
-kbgg = "Kevin Booth"
-DanielJDufour = "DanielJDufour"
 m-mohr = "Matthias Mohr"
-cholmes = "Chris Holmes"
 emmanuelmathot = "Emmanuel Mathot"
-mojodna = "Seth Fitzsimmons"
-jbants = "James Banting"
-PowerChell = "Michelle Roby"
+l0b0 = "Victor Engmark"
+simonkassel = "Simon Kassel"
+schwehr = "Kurt Schwehr"
+volaya = "Víctor Olaya"
+pjhartzell = "Preston Hartzell"

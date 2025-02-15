@@ -1,4 +1,4 @@
-# stac-top-contributors
+# pystac-top-contributors
 
 This is a fork-and-improve of <https://github.com/nbremer/ORCA>.
 

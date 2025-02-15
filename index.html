@@ -2,6 +2,11 @@
   <head>
     <meta charset="utf-8" />
 
+    <title>pystac top contributors</title>
+    <link rel="icon" type="image/x-icon" href="stac-python.png" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +22,42 @@
   </head>
   <body>
     <div id="chart-wrapper">
+      <div id="chart-introduction">
+        <div id="chart-title">
+          <h1>The Top Contributor Network of</h1>
+          <h1>
+            <span id="title-repo-name" class="central-repo">pystac</span>
+          </h1>
+        </div>
+        <p>
+          <a href="https://github.com/stac-utils/pystac">pystac</a> is a
+          foundational library in the Python software ecosystem for the
+          <a href="https://stacspec.org">
+            SpatioTemporal Asset Catalog (STAC) specification </a
+          >, a common language to describe geospatial information so it can more
+          easily be worked with, indexed, and discovered. This visualization is
+          based on the excellent work by
+          <a href="https://nbremer.github.io/ORCA/top-contributor-network/">
+            Nadieh Bremer </a
+          >.
+        </p>
+      </div>
       <div id="chart-container"></div>
+      <div id="chart-notes" class="double-column">
+        <p class="header"><strong>NOTES</strong></p>
+        <p>
+          Only contributors to <strong>pystac</strong> are shown on this chart.
+          There's many folks that have contributed to the STAC ecosystem more
+          generally, but the visualization code is built only to support
+          contributors to a single central repository.
+        </p>
+        <p>
+          The code for this visual and to collect the source data lives at
+          <a href="https://github.com/gadomski/pystac-top-contributors"
+            >gadomski/pystac-top-contributors</a
+          >.
+        </p>
+      </div>
     </div>
     <script src="orca.js"></script>
   </body>

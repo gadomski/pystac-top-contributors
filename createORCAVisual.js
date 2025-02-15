@@ -53,7 +53,7 @@ const createORCAVisual = (container) => {
 
   const INNER_RADIUS_FACTOR = 0.7; // The factor of the RADIUS_CONTRIBUTOR outside of which the inner repos are not allowed to go in the force simulation
   const MAX_CONTRIBUTOR_WIDTH = 55; // The maximum width (at SF = 1) of the contributor name before it gets wrapped
-  const CONTRIBUTOR_PADDING = 20; // The padding between the contributor nodes around the circle (at SF = 1)
+  const CONTRIBUTOR_PADDING = 150; // The padding between the contributor nodes around the circle (at SF = 1)
 
   let REMAINING_PRESENT = false; // Is the dataset of remaining contributors present?
   let ORCA_PRESENT = false; // Is the dataset of ORCA recipients present?
