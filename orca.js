@@ -9,7 +9,7 @@ document.fonts.load(`italic 700 10px "${FONT_FAMILY}"`);
 
 const container = document.getElementById("chart-container");
 let width = container.offsetWidth;
-let height = width - 400;
+let height = width;
 let ORCAVisual = createORCAVisual(container)
   .width(width)
   .height(height)

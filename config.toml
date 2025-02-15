@@ -7,11 +7,26 @@ repos = [
     "radiantearth/stac-site",
     "stac-utils/pystac-client",
     "stac-utils/stac-fastapi",
+    "stac-utils/stac-geoparquet",
+    "stac-utils/titiler-pgstac",
+    "stac-utils/stac-pydantic",
+    "stac-utils/stac-asset",
+    "stac-utils/stac-rs",
     "stac-utils/stac-fastapi-pgstac",
     "stac-utils/stactools",
     "stac-utils/pgstac",
     "stac-utils/stac-server",
     "stac-utils/stac-layer",
+    "developmentseed/titiler",
+    "developmentseed/rio-stac",
+    "developmentseed/lonboard",
+    "gadomski/antimeridian",
+    "pjhartzell/raster-footprint",
+    "geoarrow/geoarrow-rs",
+    "geoarrow/geoarrow",
+    "opengeospatial/geoparquet",
+    "opendatacube/odc-stac",
+    "gjoseph92/stackstac",
 ]
 top_contributors = [
     "lossyrob",
@@ -28,6 +43,16 @@ top_contributors = [
     "moradology",
     "m-mohr",
     "emmanuelmathot",
+    "chelm",
+    "fnattino",
+    "tyler-c2s",
+    "BobinMathew",
+    "ircwaves",
+    "kylebarron",
+    "sgillies",
+    "bmcandr",
+    "RichardScottOZ",
+    "tschaub",
 ]
 
 [contributors]
@@ -45,3 +70,13 @@ simonkassel = "Simon Kassel"
 schwehr = "Kurt Schwehr"
 volaya = "Víctor Olaya"
 pjhartzell = "Preston Hartzell"
+chelm = "Christopher Helm"
+fnattino = "Francesco Nattino"
+tyler-c2s = "Tyler Anderson"
+BobinMathew = "Bobin Mathew"
+ircwaves = "Ian Cooke"
+kylebarron = "Kyle Barron"
+sgillies = "Sean Gillies"
+bmcandr = "Brendan McAndrew"
+RichardScottOZ = "RichardScottOZ"
+tschaub = "Tim Schaub"
