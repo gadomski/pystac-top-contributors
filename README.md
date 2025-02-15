@@ -8,8 +8,8 @@ Get [uv](https://docs.astral.sh/uv/getting-started/installation/).
 Then:
 
 ```shell
-git clone git@github.com:nbremer/ORCA.git
-cd ORCA
+git clone git@github.com:Gadomski/pystac-top-contibutors
+cd pystac-top-contibutors 
 uv sync
 ```
 
