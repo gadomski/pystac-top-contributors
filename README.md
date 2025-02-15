@@ -1,7 +1,6 @@
-# ORCA
+# stac-top-contributors
 
 This is a fork-and-improve of <https://github.com/nbremer/ORCA>.
-It is currently configured to show the [STAC](https://stacspec.org/) ecosystem.
 
 ## Development
 
