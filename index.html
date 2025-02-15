@@ -1,37 +1,24 @@
-<!DOCTYPE html>
-	<head>
-        <meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, shrink-to-fit=0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-	    <title>The Top Contributor Network a GitHub Repository</title>
-	    <meta name="description" content="An interactive visualization of the top contributors to a GitHub repository and their connections to other repositories">
-        <meta name="keywords" content="data, visualization, visualisation, data visualization, data visualisation, information, information visualization, information visualisation, dataviz, datavis, infoviz, infovis, collaboration, data art">
-        <meta name="theme-color" content="#64d6d3">
+<html>
+  <head>
+    <meta charset="utf-8" />
 
-        <!-- Styling -->
-        <link rel="stylesheet" href="css/style.css">
-		
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
 
-        <!-- JavaScript libraries -->
-        <script src="lib/d3.v7.js"></script>
-        <script src="lib/d3-delaunay.js"></script>
-        <script src="lib/d3-bboxCollide.min.js"></script>
+    <script src="lib/d3.v7.js"></script>
+    <script src="lib/d3-delaunay.js"></script>
+    <script src="lib/d3-bboxCollide.min.js"></script>
 
-        <!-- Custom JavaScript file -->
-        <script src="top-contributor-network/createORCAVisual.js"></script>
-
-	</head>
-	<body>
-        <div id="chart-wrapper">
-            <h1><span id="title-repo-name" class="repository">stac-utils/pystac</span></h1>
-            <!-- The visual will be drawn here -->
-            <div id="chart-container">
-            </div>
-        </div>
-
-        <script src="visualize.js"></script>
-	</body>
+    <script src="createORCAVisual.js"></script>
+  </head>
+  <body>
+    <div id="chart-wrapper">
+      <div id="chart-container"></div>
+    </div>
+    <script src="orca.js"></script>
+  </body>
 </html>

@@ -4,6 +4,7 @@ import csv
 import datetime
 from csv import DictWriter
 from pathlib import Path
+from typing import Iterator
 
 import click
 import tomllib
@@ -33,23 +34,53 @@ class Repository(BaseModel):
     repo_url: str
     repo_description: str
     repo_languages: str
+    _contributors: list[NamedUser]
+    _repo: GithubRepository
 
     @classmethod
     def from_repo(
-        cls: type[Repository], repo: GithubRepository, contributors: list[NamedUser]
+        cls: type[Repository],
+        repo: GithubRepository,
     ) -> Repository:
+        contributors = list(repo.get_contributors())
         repo_total_commits = sum((c.contributions for c in contributors))
-        return Repository(
+        repo_url = repo.homepage or f"https://github.com/{repo.full_name}"
+
+        repository = Repository(
             repo=repo.full_name,
             repo_stars=repo.stargazers_count,
             repo_forks=repo.forks_count,
             repo_createdAt=repo.created_at,
             repo_updatedAt=repo.updated_at,
             repo_total_commits=repo_total_commits,
-            repo_url=repo.homepage,
+            repo_url=repo_url,
             repo_description=repo.description,
             repo_languages=",".join(repo.get_languages().keys()),
         )
+        repository._contributors = contributors
+        repository._repo = repo
+        return repository
+
+    def iter_links(self, config: Config) -> Iterator[Link]:
+        for contributor in self._contributors:
+            if author_name := config.contributors.get(contributor.login):
+                print(f"Getting commits for {author_name} in {self.repo}")
+                commits = list(self._repo.get_commits(author=contributor.login))
+                yield Link(
+                    author_name=author_name,
+                    repo=self.repo,
+                    commit_count=contributor.contributions,
+                    commit_sec_min=int(commits[-1].commit.author.date.timestamp()),
+                    commit_sec_max=int(commits[0].commit.author.date.timestamp()),
+                )
+
+
+class Link(BaseModel):
+    author_name: str
+    repo: str
+    commit_count: int
+    commit_sec_min: int
+    commit_sec_max: int
 
 
 @click.command
@@ -67,26 +98,12 @@ def cli() -> None:
         links = []
         for repo_name in ecosystem.repos:
             print(f"Getting {repo_name}")
-            repo = github.get_repo(repo_name)
-            contributors = []
-            for contributor in repo.get_contributors():
-                contributors.append(contributor)
-                if contributor_name := config.contributors.get(contributor.login):
-                    if contributor.login in ecosystem.top_contributors:
-                        top_contributors.add(contributor_name)
-                    print(f"Getting commits for {contributor_name}")
-                    commits = list(repo.get_commits(author=contributor.login))
-                    if commits:
-                        links.append(
-                            [
-                                contributor_name,
-                                repo.full_name,
-                                contributor.contributions,
-                                commits[0].commit.author.date.timestamp(),
-                                commits[-1].commit.author.date.timestamp(),
-                            ]
-                        )
-            repositories.append(Repository.from_repo(repo, contributors).model_dump())
+            repository = Repository.from_repo(github.get_repo(repo_name))
+            for link in repository.iter_links(config):
+                top_contributors.add(link.author_name)
+                links.append(link.model_dump())
+            repositories.append(repository.model_dump())
+
         with open(directory / "repositories.csv", "w") as f:
             fieldnames = list(Repository.model_json_schema()["properties"].keys())
             writer = DictWriter(f, fieldnames=fieldnames)
@@ -98,16 +115,9 @@ def cli() -> None:
             for name in top_contributors:
                 writer.writerow([name])
         with open(directory / "links.csv", "w") as f:
-            writer = csv.writer(f)
-            writer.writerow(
-                [
-                    "author_name",
-                    "repo",
-                    "commit_count",
-                    "commit_sec_min",
-                    "commit_sec_max",
-                ]
-            )
+            fieldnames = list(Link.model_json_schema()["properties"].keys())
+            writer = DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
             writer.writerows(links)
 
 
